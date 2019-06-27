@@ -6,6 +6,7 @@
   <Namespace>System</Namespace>
   <Namespace>System.Collections.Generic</Namespace>
   <Namespace>System.Linq</Namespace>
+  <Namespace>System.Reactive.Disposables</Namespace>
   <Namespace>System.Reactive.Linq</Namespace>
   <Namespace>System.Reactive.Subjects</Namespace>
 </Query>
