@@ -44,3 +44,12 @@ Thread.Sleep(TimeSpan.FromMilliseconds(100));
 replaySubject3.OnNext("y");
 replaySubject3.Subscribe(x => Console.WriteLine("ReplaySubject with buffer by time: {0}", x));
 replaySubject3.OnNext("z");
+
+// Если подписка будет осуществлена после завершения последовательности (OnCompleted), 
+// то все значения все равно попадут к подписчиками
+var replaySubject4 = new ReplaySubject<string>();
+replaySubject4.OnNext("a");
+replaySubject4.OnNext("b");
+replaySubject4.OnNext("c");
+replaySubject4.OnCompleted();
+replaySubject4.Subscribe(x => Console.WriteLine("ReplaySubject all values after OnCompleted: {0}", x));
